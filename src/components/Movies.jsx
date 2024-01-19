@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import Genres from "./common/Genres";
 import Pagination from "./common/Pagination";
 import MoviesTable from "./MoviesTable";
-import { getMovies } from "../services/movieService";
+import { getMovies, deleteMovie } from "../services/movieService";
 import { getGenres } from "../services/genreService";
 import { paginate } from "../services/paginate";
 import { Link } from "react-router-dom";
 import _ from "lodash";
+import sort from "../services/sort";
 
 const Movies = ({ user }) => {
   const [movieList, setMoviesList] = useState([]);
@@ -81,7 +82,7 @@ const Movies = ({ user }) => {
   };
 
   const handleSort = (path) => {
-    setsortColumn(Sort(path, sortColumn));
+    setsortColumn(sort(path, sortColumn));
   };
 
   const handleSearchQuery = (event) => {
