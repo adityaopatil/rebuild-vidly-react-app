@@ -1,7 +1,7 @@
 import Joi from "joi-browser";
 
-export function validateForm(movie, schema) {
-  const { error } = Joi.validate(movie, schema, { abortEarly: false });
+export function validateForm(data, schema) {
+  const { error } = Joi.validate(data, schema, { abortEarly: false });
 
   if (!error) return null;
 
