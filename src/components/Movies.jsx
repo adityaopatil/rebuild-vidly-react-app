@@ -97,7 +97,7 @@ const Movies = ({ user }) => {
     return (
       <>
         <p style={{ margin: 20 }}>{"There are no movies in the data"}</p>
-        <Link to="/movies/new">
+        <Link to="/new">
           <button className="btn btn-primary">Add New Movie</button>
         </Link>
       </>
@@ -114,7 +114,7 @@ const Movies = ({ user }) => {
         />
       </div>
       <div className="col" style={{ margin: 30 }}>
-        <Link to="/movies/new">
+        <Link to="/new">
           {user && (
             <button style={{ marginBottom: 50 }} className="btn btn-primary">
               New Movie

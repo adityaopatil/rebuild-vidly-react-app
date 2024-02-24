@@ -29,16 +29,16 @@ function App() {
         <Route path="/register" Component={RegisterUser} />
         <Route path="/login" Component={FormLogin} />
         <Route path="/logout" Component={Logout} />
-        <Route
-          path="/movies/:id"
-          element={isAuthenticated ? <MovieForm /> : <Navigate to="/login" />}
-        />
-        <Route path="/movies" element={<Movies user={user} />} />
         <Route path="/customers" Component={Customers} />
         <Route path="/rentals" Component={Rentals} />
         <Route path="/not-found" Component={NotFound} />
         <Route path="*" Component={() => <Navigate to="/not-found" />} />
-        <Route path="/" element={<Navigate to="/movies" />} />
+        <Route path="/" element={<Movies user={user} />} />
+        <Route
+          path="/:id"
+          element={isAuthenticated ? <MovieForm /> : <Navigate to="/login" />}
+        />
+        {/* <Route path="/" element={<Navigate to="/movies" />} /> */}
       </Routes>
     </main>
   );

@@ -11,7 +11,7 @@ const TableBody = ({ items, onLike, onDelete, userData }) => {
       {items.map((item) => (
         <tr key={item._id}>
           <td>
-            <Link style={{ textDecoration: "none" }} to={`/movies/${item._id}`}>
+            <Link style={{ textDecoration: "none" }} to={`/${item._id}`}>
               {item.title}
             </Link>
           </td>

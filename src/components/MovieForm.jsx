@@ -75,7 +75,7 @@ const MovieForm = () => {
     try {
       const result = await saveMovie(newMovie);
       console.log(result);
-      navigate("/movies", { replace: true });
+      navigate("/", { replace: true });
     } catch (ex) {
       console.error("Failed to save movie", ex);
     }
