@@ -17,7 +17,7 @@ const Movies = ({ user }) => {
     getMovies().then((res) => {
       setMoviesList(res.data);
     });
-  }, []);
+  }, [movieList]);
 
   useEffect(() => {
     getGenres().then((res) => {
